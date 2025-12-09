@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  background: #f4f7fb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header {
+  background: linear-gradient(120deg, #22c55e, #3b82f6);
   color: white;
+  padding: 2rem 1rem;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.quote-box {
+  background: white;
+  color: #111;
+  padding: 1rem;
+  margin: 1rem auto 0;
+  max-width: 500px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.course-card span {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  color: #16a34a;
+  text-transform: uppercase;
+}
+
+.course-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.2rem;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.course-card button:hover {
+  background: #15803d;
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 2rem;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .course-list {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 480px) {
+  .course-list {
+    grid-template-columns: 1fr;
   }
 }
